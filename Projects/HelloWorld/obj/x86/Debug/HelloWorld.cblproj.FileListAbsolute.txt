@@ -1,0 +1,2 @@
+C:\Users\peebs\source\repos\CIS695-IS\Cobol-Exercises\HelloWorld\bin\x86\Debug\HelloWorld.exe
+C:\Users\peebs\source\repos\CIS695-IS\Cobol-Exercises\HelloWorld\obj\x86\Debug\HelloWorld.exe

@@ -1,0 +1,8 @@
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.StudentAdminForm.resources
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.cblproj.GenerateResource.cache
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.cblproj.CoreCompileInputs.cache
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\bin\Debug\StudentAdminWFA.exe
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\bin\Debug\StudentAdminWFA.pdb
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.exe
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.pdb
+C:\Users\peebs\CIS695-IS\Projects\StudentAdminWFA\obj\Debug\StudentAdminWFA.cblprojAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\StudentAdmin.Form1.resources
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\StudentAdmin.mainFormControl.resources
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\StudentAdmin.cblproj.GenerateResource.cache
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\StudentAdmin.cblproj.CoreCompileInputs.cache
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\StudentAdmin.cblprojAssemblyReference.cache

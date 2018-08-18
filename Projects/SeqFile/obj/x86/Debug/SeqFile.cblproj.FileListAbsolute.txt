@@ -1,0 +1,2 @@
+C:\Users\peebs\CIS695-IS\Projects\SeqFile\bin\x86\Debug\SeqFile.exe
+C:\Users\peebs\CIS695-IS\Projects\SeqFile\obj\x86\Debug\SeqFile.exe

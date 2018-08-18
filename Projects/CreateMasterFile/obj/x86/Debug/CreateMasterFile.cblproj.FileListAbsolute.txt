@@ -1,0 +1,4 @@
+C:\Users\peebs\source\repos\CIS695-IS\Cobol-Exercises\CreateMasterFile\bin\x86\Debug\CreateMasterFile.exe
+C:\Users\peebs\source\repos\CIS695-IS\Cobol-Exercises\CreateMasterFile\obj\x86\Debug\CreateMasterFile.exe
+C:\Users\peebs\CIS695-IS\Projects\CreateMasterFile\bin\x86\Debug\CreateMasterFile.exe
+C:\Users\peebs\CIS695-IS\Projects\CreateMasterFile\obj\x86\Debug\CreateMasterFile.exe

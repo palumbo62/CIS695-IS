@@ -1,0 +1,8 @@
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\bin\Debug\HelloWorldWFA.exe
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\bin\Debug\HelloWorldWFA.pdb
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.Form1.resources
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.cblproj.GenerateResource.Cache
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.cblproj.CoreCompileInputs.cache
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.exe
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.pdb
+C:\Users\peebs\CIS695-IS\Projects\HelloWorldWFA\obj\Debug\HelloWorldWFA.cblprojAssemblyReference.cache

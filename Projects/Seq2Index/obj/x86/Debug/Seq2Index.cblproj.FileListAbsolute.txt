@@ -1,0 +1,4 @@
+C:\Users\peebs\CIS695-IS\Projects\SeqIndex\SeqIndex\bin\x86\Debug\SeqIndex.exe
+C:\Users\peebs\CIS695-IS\Projects\SeqIndex\SeqIndex\obj\x86\Debug\SeqIndex.exe
+C:\Users\peebs\CIS695-IS\Projects\Seq2Index\bin\x86\Debug\SeqIndex.exe
+C:\Users\peebs\CIS695-IS\Projects\Seq2Index\obj\x86\Debug\SeqIndex.exe

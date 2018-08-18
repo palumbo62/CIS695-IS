@@ -1,0 +1,2 @@
+C:\Users\peebs\CIS695-IS\Projects\StudFees\bin\x86\Debug\StudFees.exe
+C:\Users\peebs\CIS695-IS\Projects\StudFees\obj\x86\Debug\StudFees.exe
