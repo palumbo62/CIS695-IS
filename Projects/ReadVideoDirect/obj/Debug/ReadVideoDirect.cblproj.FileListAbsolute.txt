@@ -1,0 +1,6 @@
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\bin\Debug\ReadVideoDirect.exe
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\bin\Debug\ReadVideoDirect.pdb
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\obj\Debug\ReadVideoDirect.cblprojAssemblyReference.cache
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\obj\Debug\ReadVideoDirect.cblproj.CoreCompileInputs.cache
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\obj\Debug\ReadVideoDirect.exe
+C:\Users\peebs\CIS695-IS\Projects\ReadVideoDirect\obj\Debug\ReadVideoDirect.pdb

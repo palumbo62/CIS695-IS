@@ -29,6 +29,7 @@
        01 studentLastNameInp type System.Windows.Forms.TextBox.
        01 studentIdInp type System.Windows.Forms.TextBox.
        01 studentDateOfBirthInp type System.Windows.Forms.DateTimePicker.
+       01 button1 type System.Windows.Forms.Button.
        01 components type System.ComponentModel.IContainer.
       
       *> Required method for Designer support - do not modify
@@ -63,13 +64,14 @@
        set label2 to new System.Windows.Forms.Label
        set label1 to new System.Windows.Forms.Label
        set groupBox2 to new System.Windows.Forms.GroupBox
+       set button1 to new System.Windows.Forms.Button
        invoke groupBox1::SuspendLayout
        invoke groupBox2::SuspendLayout
        invoke self::SuspendLayout
       *> 
       *> queryBtn
       *> 
-       set queryBtn::Location to new System.Drawing.Point(47 30)
+       set queryBtn::Location to new System.Drawing.Point(47 32)
        set queryBtn::Name to "queryBtn"
        set queryBtn::Size to new System.Drawing.Size(75 23)
        set queryBtn::TabIndex to 0
@@ -79,27 +81,27 @@
       *> 
       *> exitBtn
       *> 
-       set exitBtn::Location to new System.Drawing.Point(47 248)
+       set exitBtn::Location to new System.Drawing.Point(47 277)
        set exitBtn::Name to "exitBtn"
        set exitBtn::Size to new System.Drawing.Size(75 23)
-       set exitBtn::TabIndex to 1
+       set exitBtn::TabIndex to 5
        set exitBtn::Text to "Exit"
        set exitBtn::UseVisualStyleBackColor to True
        invoke exitBtn::add_Click(new System.EventHandler(self::button2_Click))
       *> 
       *> clearBtn
       *> 
-       set clearBtn::Location to new System.Drawing.Point(47 175)
+       set clearBtn::Location to new System.Drawing.Point(47 214)
        set clearBtn::Name to "clearBtn"
        set clearBtn::Size to new System.Drawing.Size(75 23)
-       set clearBtn::TabIndex to 2
+       set clearBtn::TabIndex to 4
        set clearBtn::Text to "Clear"
        set clearBtn::UseVisualStyleBackColor to True
        invoke clearBtn::add_Click(new System.EventHandler(self::clearBtn_Click))
       *> 
       *> deleteBtn
       *> 
-       set deleteBtn::Location to new System.Drawing.Point(47 125)
+       set deleteBtn::Location to new System.Drawing.Point(47 170)
        set deleteBtn::Name to "deleteBtn"
        set deleteBtn::Size to new System.Drawing.Size(75 23)
        set deleteBtn::TabIndex to 3
@@ -108,12 +110,13 @@
       *> 
       *> addBtn
       *> 
-       set addBtn::Location to new System.Drawing.Point(47 75)
+       set addBtn::Location to new System.Drawing.Point(47 80)
        set addBtn::Name to "addBtn"
        set addBtn::Size to new System.Drawing.Size(75 23)
-       set addBtn::TabIndex to 4
+       set addBtn::TabIndex to 1
        set addBtn::Text to "Add"
        set addBtn::UseVisualStyleBackColor to True
+       invoke addBtn::add_Click(new System.EventHandler(self::addBtn_Click))
       *> 
       *> groupBox1
       *> 
@@ -151,18 +154,18 @@
        set studentGenderFemaleInp::Location to new System.Drawing.Point(208 258)
        set studentGenderFemaleInp::Name to "studentGenderFemaleInp"
        set studentGenderFemaleInp::Size to new System.Drawing.Size(59 17)
-       set studentGenderFemaleInp::TabIndex to 21
-       set studentGenderFemaleInp::TabStop to True
+       set studentGenderFemaleInp::TabIndex to 17
        set studentGenderFemaleInp::Text to "Female"
        set studentGenderFemaleInp::UseVisualStyleBackColor to True
       *> 
       *> studentGenderMaleInp
       *> 
        set studentGenderMaleInp::AutoSize to True
+       set studentGenderMaleInp::Checked to True
        set studentGenderMaleInp::Location to new System.Drawing.Point(144 258)
        set studentGenderMaleInp::Name to "studentGenderMaleInp"
        set studentGenderMaleInp::Size to new System.Drawing.Size(48 17)
-       set studentGenderMaleInp::TabIndex to 20
+       set studentGenderMaleInp::TabIndex to 16
        set studentGenderMaleInp::TabStop to True
        set studentGenderMaleInp::Text to "Male"
        set studentGenderMaleInp::UseVisualStyleBackColor to True
@@ -173,7 +176,7 @@
        set label7::Location to new System.Drawing.Point(40 258)
        set label7::Name to "label7"
        set label7::Size to new System.Drawing.Size(45 13)
-       set label7::TabIndex to 19
+       set label7::TabIndex to 6
        set label7::Text to "Gender:"
       *> 
       *> studentStateInp
@@ -182,7 +185,7 @@
        set studentStateInp::MaxLength to 2
        set studentStateInp::Name to "studentStateInp"
        set studentStateInp::Size to new System.Drawing.Size(20 20)
-       set studentStateInp::TabIndex to 18
+       set studentStateInp::TabIndex to 20
        set studentStateInp::WordWrap to False
       *> 
       *> stateLabel
@@ -191,7 +194,7 @@
        set stateLabel::Location to new System.Drawing.Point(37 362)
        set stateLabel::Name to "stateLabel"
        set stateLabel::Size to new System.Drawing.Size(35 13)
-       set stateLabel::TabIndex to 16
+       set stateLabel::TabIndex to 9
        set stateLabel::Text to "State:"
       *> 
       *> cityLabel
@@ -200,7 +203,7 @@
        set cityLabel::Location to new System.Drawing.Point(37 334)
        set cityLabel::Name to "cityLabel"
        set cityLabel::Size to new System.Drawing.Size(27 13)
-       set cityLabel::TabIndex to 15
+       set cityLabel::TabIndex to 8
        set cityLabel::Text to "City:"
       *> 
       *> studentAddressInp
@@ -209,7 +212,7 @@
        set studentAddressInp::MaxLength to 30
        set studentAddressInp::Name to "studentAddressInp"
        set studentAddressInp::Size to new System.Drawing.Size(192 20)
-       set studentAddressInp::TabIndex to 14
+       set studentAddressInp::TabIndex to 18
        set studentAddressInp::WordWrap to False
       *> 
       *> studentCityInp
@@ -218,7 +221,7 @@
        set studentCityInp::MaxLength to 20
        set studentCityInp::Name to "studentCityInp"
        set studentCityInp::Size to new System.Drawing.Size(132 20)
-       set studentCityInp::TabIndex to 13
+       set studentCityInp::TabIndex to 19
        set studentCityInp::WordWrap to False
       *> 
       *> studentDateOfBirthInp
@@ -227,7 +230,7 @@
        set studentDateOfBirthInp::MinDate to new System.DateTime(1900 1 1 0 0 0 0)
        set studentDateOfBirthInp::Name to "studentDateOfBirthInp"
        set studentDateOfBirthInp::Size to new System.Drawing.Size(200 20)
-       set studentDateOfBirthInp::TabIndex to 12
+       set studentDateOfBirthInp::TabIndex to 14
        set studentDateOfBirthInp::Value to new System.DateTime(2018 8 17 18 1 12 0)
        invoke studentDateOfBirthInp::add_ValueChanged(new System.EventHandler(self::dateTimePicker1_ValueChanged))
       *> 
@@ -237,7 +240,7 @@
        set studentSsnInp::MaxLength to 9
        set studentSsnInp::Name to "studentSsnInp"
        set studentSsnInp::Size to new System.Drawing.Size(62 20)
-       set studentSsnInp::TabIndex to 11
+       set studentSsnInp::TabIndex to 15
        set studentSsnInp::WordWrap to False
       *> 
       *> studentMiddleNameInp
@@ -246,7 +249,7 @@
        set studentMiddleNameInp::MaxLength to 15
        set studentMiddleNameInp::Name to "studentMiddleNameInp"
        set studentMiddleNameInp::Size to new System.Drawing.Size(100 20)
-       set studentMiddleNameInp::TabIndex to 10
+       set studentMiddleNameInp::TabIndex to 13
        set studentMiddleNameInp::WordWrap to False
       *> 
       *> studentFirstNameInp
@@ -255,7 +258,7 @@
        set studentFirstNameInp::MaxLength to 15
        set studentFirstNameInp::Name to "studentFirstNameInp"
        set studentFirstNameInp::Size to new System.Drawing.Size(100 20)
-       set studentFirstNameInp::TabIndex to 9
+       set studentFirstNameInp::TabIndex to 12
        set studentFirstNameInp::WordWrap to False
       *> 
       *> studentLastNameInp
@@ -264,16 +267,16 @@
        set studentLastNameInp::MaxLength to 20
        set studentLastNameInp::Name to "studentLastNameInp"
        set studentLastNameInp::Size to new System.Drawing.Size(123 20)
-       set studentLastNameInp::TabIndex to 8
+       set studentLastNameInp::TabIndex to 11
        set studentLastNameInp::WordWrap to False
       *> 
       *> studentIdInp
       *> 
        set studentIdInp::Location to new System.Drawing.Point(144 48)
-       set studentIdInp::MaxLength to 10
+       set studentIdInp::MaxLength to 5
        set studentIdInp::Name to "studentIdInp"
        set studentIdInp::Size to new System.Drawing.Size(71 20)
-       set studentIdInp::TabIndex to 7
+       set studentIdInp::TabIndex to 10
        set studentIdInp::WordWrap to False
       *> 
       *> addressLabel
@@ -282,7 +285,7 @@
        set addressLabel::Location to new System.Drawing.Point(38 308)
        set addressLabel::Name to "addressLabel"
        set addressLabel::Size to new System.Drawing.Size(48 13)
-       set addressLabel::TabIndex to 6
+       set addressLabel::TabIndex to 7
        set addressLabel::Text to "Address:"
       *> 
       *> label6
@@ -342,6 +345,7 @@
       *> 
       *> groupBox2
       *> 
+       invoke groupBox2::Controls::Add(button1)
        invoke groupBox2::Controls::Add(queryBtn)
        invoke groupBox2::Controls::Add(exitBtn)
        invoke groupBox2::Controls::Add(clearBtn)
@@ -349,9 +353,18 @@
        invoke groupBox2::Controls::Add(addBtn)
        set groupBox2::Location to new System.Drawing.Point(471 46)
        set groupBox2::Name to "groupBox2"
-       set groupBox2::Size to new System.Drawing.Size(169 298)
-       set groupBox2::TabIndex to 6
+       set groupBox2::Size to new System.Drawing.Size(169 351)
+       set groupBox2::TabIndex to 0
        set groupBox2::TabStop to False
+      *> 
+      *> button1
+      *> 
+       set button1::Location to new System.Drawing.Point(47 124)
+       set button1::Name to "button1"
+       set button1::Size to new System.Drawing.Size(75 23)
+       set button1::TabIndex to 2
+       set button1::Text to "Update"
+       set button1::UseVisualStyleBackColor to True
       *> 
       *> StudentAdminForm
       *> 
