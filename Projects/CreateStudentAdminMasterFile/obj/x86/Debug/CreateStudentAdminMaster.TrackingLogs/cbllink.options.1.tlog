@@ -1,4 +1,2 @@
-^C:\USERS\PEEBS\CIS695-IS\PROJECTS\CREATESTUDENTADMINMASTERFILE\OBJ\X86\DEBUG\COBOLSEQ2INDEX.OBJ
-MFCBT_Options=-Oobj\x86\Debug\SeqIndex.exe -N -FM obj\x86\Debug\COBOLSeq2Index.obj . MFCBT_Objs=
 ^C:\USERS\PEEBS\CIS695-IS\PROJECTS\CREATESTUDENTADMINMASTERFILE\OBJ\X86\DEBUG\CREATESTUDENTADMINMASTER.OBJ
-MFCBT_Options=-Oobj\x86\Debug\SeqIndex.exe -N -FM obj\x86\Debug\CreateStudentAdminMaster.obj . MFCBT_Objs=
+MFCBT_Options=-Oobj\x86\Debug\CreateStudentAdminMaster.exe -N -FM obj\x86\Debug\CreateStudentAdminMaster.obj . MFCBT_Objs=

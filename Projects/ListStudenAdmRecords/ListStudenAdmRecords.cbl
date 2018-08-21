@@ -24,11 +24,12 @@ FD StudentFile.
        03 BirthYear    PIC 9(4).
        03 BirthMonth   PIC 9(2).
        03 BirthDay     PIC 9(2).
-    02  StudentSSN      PIC 9(9).
-    02  Gender          PIC X.
-    02  StudentAddress  PIC X(30).
-    02  StudentCity     PIC X(20).
-    02  StudentState    PIC X(2).
+    02 StudentSSN      PIC 9(9).
+    02 Gender          PIC X.
+    02 StudentAddress  PIC X(30).
+    02 StudentCity     PIC X(20).
+    02 StudentState    PIC X(2).
+    02 StudentZipCode  PIC 9(5).
 
 WORKING-STORAGE SECTION.
 01 RecordStatus         PIC X(2).
@@ -58,7 +59,12 @@ Read-Input-File.
         DISPLAY "Firstname:  " & Firstname
         DISPLAY "Middlename: " & Middlename
         DISPLAY "SSN:        " & StudentSSN
-        DISPLAY "-------------"
+        DISPLAY "DOB:        " & BirthMonth & '/' & BirthMonth & '/' BirthYear
+        DISPLAY "Address:    " & StudentAddress
+        DISPLAY "City:       " & StudentCity
+        DISPLAY "State:      " & StudentState
+        DISPLAY "ZipCode:    " & StudentZipCOde
+        DISPLAY "------------"
     END-IF
 
 END PROGRAM ListStudenAdmRecords.

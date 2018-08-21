@@ -1,4 +1,2 @@
-^C:\USERS\PEEBS\CIS695-IS\PROJECTS\CREATESTUDENTADMINMASTERFILE\COBOLSEQ2INDEX.CBL
-MFCBT_Directives=int"C:obj\x86\Debug\COBOLSeq2Index.int" anim cobidy".\bin\x86\Debug\" sourcetabstop"4" sourceformat"Variable" noquery osext() warnings"1" max-error"100" . MFCBT_CopyPaths=
 ^C:\USERS\PEEBS\CIS695-IS\PROJECTS\CREATESTUDENTADMINMASTERFILE\CREATESTUDENTADMINMASTER.CBL
-MFCBT_Directives=int"C:obj\x86\Debug\CreateStudentAdminMaster.int" anim cobidy".\bin\x86\Debug\" sourcetabstop"4" sourceformat"Variable" noquery osext() warnings"1" max-error"100" . MFCBT_CopyPaths=
+MFCBT_Directives=int"C:obj\x86\Debug\CreateStudentAdminMaster.int" anim cobidy".\bin\x86\Debug\" sourcetabstop"4" sourceformat"Free" noquery osext() warnings"1" max-error"100" . MFCBT_CopyPaths=

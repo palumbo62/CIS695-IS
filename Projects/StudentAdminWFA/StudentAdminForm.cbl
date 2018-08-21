@@ -34,7 +34,7 @@ FD  StudentAdminMasterFile.
     02 StudentAddress  PIC X(30).
     02 StudentCity     PIC X(20).
     02 StudentState    PIC X(2).
-
+    02 StudentZipCode  PIC 9(5).
 
 WORKING-STORAGE SECTION.
 01  RecordStatus       PIC 9(2).
@@ -49,6 +49,63 @@ procedure division.
 
     invoke self::InitializeComponent
     goback.
+end method.
+
+method-id copyDataFromRecordToForm final private.
+procedure division.
+    move Lastname to studentLastNameInp::Text
+    move Firstname to studentFirstNameInp::Text
+    move Middlename to studentMiddleNameInp::Text
+    move StudentSSN to studentSsnInp::Text
+            
+    if Gender = 'M'
+        move true to studentGenderMaleInp::Checked
+        move false to studentGenderFemaleInp::Checked
+    else
+        move false to studentGenderMaleInp::Checked
+        move true to studentGenderFemaleInp::Checked
+    end-if
+
+    move StudentAddress to studentAddressInp::Text
+    move StudentCity to studentCityInp::Text
+    move StudentState to studentStateInp::Text
+    move StudentZipCode to studentZipCodeInp::Text
+end method.
+
+method-id copyDataFromFormToRecord final private.
+local-storage section.
+01 ls-date  type DateTime.
+
+procedure division.
+    try
+*       Populate the record to add
+        set studentId to type System.Convert::ToInt16(studentIdInp::Text)
+
+        set Lastname to studentLastNameInp::Text
+        set Firstname to studentFirstNameInp::Text
+        set Middlename to studentMiddleNameInp::Text
+        set studentSSN to type System.Convert::ToInt64(studentSsnInp::Text)
+            
+        if studentGenderMaleInp::Checked = true
+            set Gender to Male
+        else
+            set Gender to Female
+        end-if
+
+*       Set date of birth
+        set ls-date to studentDateOfBirthInp::Value
+        set BirthYear to ls-date::Year
+        set BirthMonth to ls-date::Month
+        set BirthDay to ls-date::Day
+
+        set StudentAddress to studentAddressInp::Text
+        set StudentCity to studentCityInp::Text
+        set StudentState to studentStateInp::Text
+        set StudentZipCode to type System.Convert::ToInt32(studentZipCodeInp::Text)
+
+    catch
+        invoke type MessageBox::Show(exception-object::Message)
+
 end method.
 
 method-id openStudentAdminMaster final private.
@@ -76,6 +133,22 @@ procedure division using by value sender as object e as type System.EventArgs.
     invoke self::Close().
 end method.
 
+method-id clearBtn_Click final private.
+procedure division using by value sender as object e as type System.EventArgs.
+*    clear all fields
+    move spaces to studentidinp::Text.
+    move spaces to studentlastnameinp::Text.
+    move spaces to studentfirstnameinp::Text.
+    move spaces to studentmiddlenameinp::Text.
+    move spaces to studentssninp::Text.
+    move spaces to studentaddressinp::Text.
+    move spaces to studentcityinp::Text.
+    move spaces to studentstateinp::Text.
+    move spaces to studentZipCodeInp::Text.
+    move true   to studentGenderFemaleInp::Checked.
+    move false  to studentGenderMaleInp::Checked.
+end method.
+
 method-id queryBtn_Click final private.
 procedure division using by value sender as object e as type System.EventArgs.
     try
@@ -83,29 +156,30 @@ procedure division using by value sender as object e as type System.EventArgs.
 
         read StudentAdminMasterFile
             key is studentId
-*            invalid key
-*                invoke type MessageBox::Show("RecordStatus '" & RecordStatus)
         end-read
 
         if RecordFound
-*            invoke type MessageBox::Show("Student ID: '" & studentId & "' Lastname:'" & Lastname & "'")
-            move Lastname to studentLastNameInp::Text
-            move Firstname to studentFirstNameInp::Text
-            move Middlename to studentMiddleNameInp::Text
-            move StudentSSN to studentSsnInp::Text
+*           Copy data from the record to the GUI form
+            invoke copyDataFromRecordToForm
             
-            if Gender = 'M'
-                move true to studentGenderMaleInp::Checked
-                move false to studentGenderFemaleInp::Checked
-            else
-                move false to studentGenderMaleInp::Checked
-                move true to studentGenderFemaleInp::Checked
-            end-if
-
-            move StudentAddress to studentAddressInp::Text
-            move StudentCity to studentCityInp::Text
-            move StudentState to studentStateInp::Text
-            
+*>             move Lastname to studentLastNameInp::Text
+*>             move Firstname to studentFirstNameInp::Text
+*>             move Middlename to studentMiddleNameInp::Text
+*>             move StudentSSN to studentSsnInp::Text
+*>             
+*>             if Gender = 'M'
+*>                 move true to studentGenderMaleInp::Checked
+*>                 move false to studentGenderFemaleInp::Checked
+*>             else
+*>                 move false to studentGenderMaleInp::Checked
+*>                 move true to studentGenderFemaleInp::Checked
+*>             end-if
+*> 
+*>             move StudentAddress to studentAddressInp::Text
+*>             move StudentCity to studentCityInp::Text
+*>             move StudentState to studentStateInp::Text
+*>             move StudentZipCode to studentZipCodeInp::Text
+*>             
         else
             invoke type MessageBox::Show("Student ID: '" & studentId & "' Not found in Database!'")
         end-if
@@ -119,50 +193,38 @@ procedure division using by value sender as object e as type System.EventArgs.
 
 end method.
 
-method-id clearBtn_Click final private.
-procedure division using by value sender as object e as type System.EventArgs.
-*    clear all fields
-    move spaces to studentidinp::Text.
-    move spaces to studentlastnameinp::Text.
-    move spaces to studentfirstnameinp::Text.
-    move spaces to studentmiddlenameinp::Text.
-    move spaces to studentssninp::Text.
-    move spaces to studentaddressinp::Text.
-    move spaces to studentcityinp::Text.
-    move spaces to studentstateinp::Text.
-    move true   to studentGenderFemaleInp::Checked.
-    move false  to studentGenderMaleInp::Checked.
-end method.
-
 method-id addBtn_Click final private.
 local-storage section.
 01 ls-date  type DateTime.
 
 procedure division using by value sender as object e as type System.EventArgs.
     try
-
-* Populate the record to add
-        set studentId to type System.Convert::ToInt16(studentIdInp::Text)
-
-        set Lastname to studentLastNameInp::Text
-        set Firstname to studentFirstNameInp::Text
-        set Middlename to studentMiddleNameInp::Text
-        set studentSSN to type System.Convert::ToInt64(studentSsnInp::Text)
-            
-        if studentGenderMaleInp::Checked = true
-            set Gender to Male
-        else
-            set Gender to Female
-        end-if
-
-        set ls-date to studentDateOfBirthInp::Value
-        set BirthYear to ls-date::Year
-        set BirthMonth to ls-date::Month
-        set BirthDay to ls-date::Day
-
-        move StudentAddress to studentAddressInp::Text
-        move StudentCity to studentCityInp::Text
-        move StudentState to studentStateInp::Text
+*>      copy the data from the GUI Form to the Record
+        invoke copyDataFromFormToRecord
+*> * Populate the record to add
+*>         set studentId to type System.Convert::ToInt16(studentIdInp::Text)
+*> 
+*>         set Lastname to studentLastNameInp::Text
+*>         set Firstname to studentFirstNameInp::Text
+*>         set Middlename to studentMiddleNameInp::Text
+*>         set studentSSN to type System.Convert::ToInt64(studentSsnInp::Text)
+*>             
+*>         if studentGenderMaleInp::Checked = true
+*>             set Gender to Male
+*>         else
+*>             set Gender to Female
+*>         end-if
+*> 
+*> * Set date of birth
+*>         set ls-date to studentDateOfBirthInp::Value
+*>         set BirthYear to ls-date::Year
+*>         set BirthMonth to ls-date::Month
+*>         set BirthDay to ls-date::Day
+*> 
+*>         set StudentAddress to studentAddressInp::Text
+*>         set StudentCity to studentCityInp::Text
+*>         set StudentState to studentStateInp::Text
+*>         set StudentZipCode to type System.Convert::ToInt32(studentZipCodeInp::Text)
             
 *   write the record to the database
         write studentAdmRec
@@ -177,8 +239,10 @@ procedure division using by value sender as object e as type System.EventArgs.
         invoke type MessageBox::Show(exception-object::Message)
         
     finally
-        invoke type MessageBox::Show("Add Student ID RecStatus:  " & RecordStatus)
+        if RecordFound
+            invoke type MessageBox::Show("Student ID: " & studentId & " successfully added!")
+        end-if
 
 end method.
-             
+
 end class.

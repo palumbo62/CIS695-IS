@@ -3,7 +3,7 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <ProjectGuid>{60F58649-8A76-45D8-9E6E-1DAB224D806F}</ProjectGuid>
-    <OutputName>SeqIndex</OutputName>
+    <OutputName>CreateStudentAdminMaster</OutputName>
     <OutputType>Exe</OutputType>
     <RootNamespace>SeqIndex</RootNamespace>
     <MFProjectType>Native</MFProjectType>
@@ -14,7 +14,7 @@
     <ManagedCode>False</ManagedCode>
     <DebugSymbols>True</DebugSymbols>
     <MaxError>100</MaxError>
-    <SourceFormat>Variable</SourceFormat>
+    <SourceFormat>Free</SourceFormat>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>.\bin\x86\Release\</OutputPath>

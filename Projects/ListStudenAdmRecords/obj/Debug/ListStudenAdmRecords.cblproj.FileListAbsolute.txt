@@ -3,4 +3,3 @@ C:\Users\peebs\CIS695-IS\Projects\ListStudenAdmRecords\bin\Debug\ListStudenAdmRe
 C:\Users\peebs\CIS695-IS\Projects\ListStudenAdmRecords\obj\Debug\ListStudenAdmRecords.cblproj.CoreCompileInputs.cache
 C:\Users\peebs\CIS695-IS\Projects\ListStudenAdmRecords\obj\Debug\ListStudenAdmRecords.exe
 C:\Users\peebs\CIS695-IS\Projects\ListStudenAdmRecords\obj\Debug\ListStudenAdmRecords.pdb
-C:\Users\peebs\CIS695-IS\Projects\ListStudenAdmRecords\obj\Debug\ListStudenAdmRecords.cblprojAssemblyReference.cache
